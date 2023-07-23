@@ -1,0 +1,53 @@
+import pyrebase
+from firebase import firebase
+import serial
+
+ser=serial.Serial('/dev/ttyACMO'9600)
+
+config={
+  "apiKey": "AIzaSyDe5stC8eSni7NttlD6dmSpuhD8Cb8eDGg",
+  "authDomain": "customremote-f9d52.firebaseapp.com",
+  "databaseURL": "https://customremote-f9d52-default-rtdb.firebaseio.com",
+  "projectId": "customremote-f9d52",
+  "storageBucket": "customremote-f9d52.appspot.com",
+  
+
+}
+
+firebase =pyrebase.initialize_app(config)
+db = fiberbase.database()
+def stream_handler (message):
+	ser.write(str.encode(message["data"}))
+#
+my_straeam= db.child("Move/move").stream(stream_handler)
+
+
+
+
+
+If you don't want to transfer data to Arduino but instead want to print the data in your Python code, you can modify the `stream_handler` function accordingly. Instead of writing data to the Arduino through the serial connection, you can simply print the data received from the Firebase Realtime Database. Here's the modified code:
+
+```python
+import pyrebase
+
+config = {
+    "apiKey": "YOUR_API_KEY",
+    "authDomain": "YOUR_AUTH_DOMAIN",
+    "databaseURL": "YOUR_DATABASE_URL",
+    "projectId": "YOUR_PROJECT_ID",
+    "storageBucket": "YOUR_STORAGE_BUCKET",
+}
+
+firebase = pyrebase.initialize_app(config)
+db = firebase.database()
+
+def stream_handler(message):
+    data = message["data"]
+    print("Received data from Firebase:", data)
+
+my_stream = db.child("Move/move").stream(stream_handler)
+```
+
+Replace "YOUR_API_KEY", "YOUR_AUTH_DOMAIN", "YOUR_DATABASE_URL", "YOUR_PROJECT_ID", and "YOUR_STORAGE_BUCKET" with your actual Firebase project configuration.
+
+With this modified code, when data changes occur in the Firebase Realtime Database under the path "Move/move," the `stream_handler` function will be triggered, and it will print the received data to the console.
