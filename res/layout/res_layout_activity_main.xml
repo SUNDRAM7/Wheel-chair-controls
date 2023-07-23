@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <!--
+     Navigation bar with six buttons arranged in + manner -->
+
+    <!-- left buttons -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/wheel_chair_control"
+        android:textColor="@color/white"
+        android:textSize="40sp"/>
+    <Button
+        android:id="@+id/left1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="200dp"
+        android:padding="20dp"
+        android:text="@string/left1"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+
+    <!-- left2 -->
+
+    <Button
+        android:id="@+id/left2"
+        android:layout_below="@+id/left1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:padding="20dp"
+        android:text="@string/left2"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+    <!-- left 3 -->
+
+    <Button
+        android:id="@+id/left3"
+        android:layout_below="@+id/left2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:padding="20dp"
+        android:text="@string/left3"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+    <!--forward-->
+    <Button
+        android:id="@+id/forward"
+        android:layout_toRightOf="@+id/left1"
+        android:layout_width="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_height="100dp"
+        android:padding="20dp"
+        android:text="@string/forward"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+    <!--backward-->
+    <Button
+        android:id="@+id/backward"
+        android:layout_toRightOf="@+id/left3"
+        android:layout_width="100dp"
+        android:layout_marginTop="400dp"
+        android:layout_height="100dp"
+        android:padding="20dp"
+        android:text="@string/backward_reverse"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+    <!--right 1-->
+    <Button
+        android:id="@+id/right1"
+        android:layout_toRightOf="@+id/left2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="100dp"
+        android:padding="20dp"
+        android:text="@string/right_1"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+    <!--right 2-->
+
+    <Button
+        android:id="@+id/right2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@+id/left2"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="300dp"
+        android:padding="20dp"
+        android:paddingBottom="20dp"
+        android:text="RIGHT 2"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+    <!--right3-->
+    <Button
+        android:id="@+id/right3"
+        android:layout_toRightOf="@+id/left3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="100dp"
+        android:padding="20dp"
+        android:layout_marginTop="400dp"
+        android:text="RIGHT 3"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+    <!--stop-->
+    <Button
+        android:id="@+id/stop"
+        android:layout_toRightOf="@+id/left2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/black"
+        android:padding="20dp"
+        android:layout_marginTop="300dp"
+        android:text="stop"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20sp"
+        android:paddingBottom="20dp"/>
+
+
+</RelativeLayout>
